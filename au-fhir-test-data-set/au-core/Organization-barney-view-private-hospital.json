@@ -3,8 +3,7 @@
   "id": "barney-view-private-hospital",
   "meta": {
     "profile": [
-      "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization",
-      "http://hl7.org.au/fhir/ereq/StructureDefinition/au-erequesting-organization"
+      "http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization"
     ]
   },
   "identifier": [
