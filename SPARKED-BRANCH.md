@@ -4,8 +4,9 @@ This is not HL7 AU test data. The authoritative set is
 [hl7au/au-fhir-test-data](https://github.com/hl7au/au-fhir-test-data); use that
 one unless you specifically need what is described below.
 
-`sparked-aucore-loadable` is a Sparked-maintained branch of that repository,
-tracking upstream `master` and carrying the smallest patch that lets the
+`sparked-aucore-loadable-2026-11` is a Sparked-maintained branch of that
+repository: upstream `master` at `af8a563` (23 November 2026) plus the smallest
+patch that lets the
 `au-core` folder load onto an AU Core server that does not also carry the AU
 eRequesting IG. It exists because the Sparked AU Core server
 (smile.sparked-fhir.com/aucore) loads this data with request validation on, and
@@ -28,8 +29,11 @@ Nothing else is changed. No resource content, no codings, no signatures.
 
 ## Maintenance
 
-Rebase on upstream `master` rather than merging, so the patch stays a readable
-two commits on top. Both changes are upstream defects: when the equivalent fixes
+A refresh is a new branch from upstream `master` with these commits picked on
+top, never a rewrite of a branch the loader has installed: the branch it
+replaces stays unchanged so the loader can be pointed back at it. The previous
+one is `sparked-aucore-loadable` (upstream `master` at `ecc2ff7`, loaded
+24 August 2026). Both changes are upstream defects: when the equivalent fixes
 land in `hl7au/au-fhir-test-data`, drop the corresponding commit, and retire the
 branch once both are gone.
 
